@@ -21,41 +21,43 @@ const questions = [{
     name: 'title'
 },
 {
-    type:
-    message:
-    name:
+    type: 'input',
+    message: 'Describe what your application does, what were some of the challenges you faced, and what are some features you hope to implement in the future.',
+    name: 'installation'
 },
 {
-    type:
-    message:
-    name:
+    type: 'checkbox',
+    message: 'What technologies were used?',
+    choices: [],
+    name: 'technologies'
 },
 {
-    type:
-    message:
-    name:
+    type: 'input',
+    message: 'Describe the installation process.',
+    name: 'installation'
 },
 {
-    type:
-    message:
-    name:
+    type: 'input',
+    message: 'What is this project usage for?',
+    name: 'usage'
 },
 {
-    type:
-    message:
-    name:
+    type: 'list',
+    message: 'Choose the appropriate license for this project',
+    choices: [],
+    name: 'license'
 },
 {
-    type:
-    message:
-    name:
+    type: 'input',
+    message: 'Is there a test included?',
+    name: 'tests'
 }
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(template, responses) {
     // path.join joins together the cwd and filename we pass in
-    return fs.writeFileSync(path.join(process.cwd(), fileName), data)
+    return fs.writeFileSync(path.join(process.cwd(), template), responses)
 }
 
 // function to initialize program

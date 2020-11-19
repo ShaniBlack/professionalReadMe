@@ -23,12 +23,32 @@ const questions = [{
 {
     type: 'input',
     message: 'Describe what your application does, what were some of the challenges you faced, and what are some features you hope to implement in the future.',
-    name: 'installation'
+    name: 'description'
+},
+// {
+//     type: 'input',
+//     message: 'Add path or link to images/videos here',
+//     name: 'images'
+// },
+{
+    type: 'input',
+    message: 'Who were your collaborators, if any?',
+    name: 'contributing'
 },
 {
     type: 'checkbox',
-    message: 'What technologies were used?',
-    choices: [],
+    message: 'What technologies or applications were used?',
+    choices: [
+        "HTML",
+        "JavaScript",
+        "CSS",
+        "node.js",
+        "jQuery",
+        "inquirer",
+        "path",
+        "Screencastify",
+        "json"
+    ],
     name: 'technologies'
 },
 {
@@ -44,7 +64,16 @@ const questions = [{
 {
     type: 'list',
     message: 'Choose the appropriate license for this project',
-    choices: [],
+    choices: [
+        "GNU AGPLv3",
+        "GNU GPLv3",
+        "GNU LGPLv3",
+        "Mozilla Public License 2.0",
+        "Apache License 2.0",
+        "MIT License",
+        "Boost Software License 1.0",
+        "The Unlicense"
+    ],
     name: 'license'
 },
 {
@@ -66,7 +95,7 @@ function init() {
     .then(function(response){
         writeToFile("README.md", generateMarkdown(response))
     })
-
+    .catch((err) => console.error(err))    
 }
 
 // function call to initialize program

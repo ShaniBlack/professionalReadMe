@@ -5,6 +5,10 @@ function generateMarkdown(responses) {
   ## Description
   ${responses.description}
 
+  Here are some of the technologies that were used to the create this program:
+  ${responses.technologies}
+
+  
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -16,6 +20,7 @@ function generateMarkdown(responses) {
   ## Installation
   ${responses.installation}
 
+
   ## Usage
   ${responses.usage}
 
@@ -26,13 +31,11 @@ function generateMarkdown(responses) {
   ${responses.tests}
 
   ## Questions
-  Please feel free to find me on GitHub: [${responses.username}](https://github.com/${answers.username})
-  Or email me with any questions: ${responses.email}
+  Please feel free to find me on GitHub: [${responses.username}](https://github.com/${responses.username}).
+  You can also [email](shaniblack2004@gmail.com) me with any questions.
 
   ## License
   This application is covered by the ${responses.license} license.
-
-
 `;
 }
 
